@@ -24,6 +24,7 @@ namespace kagabitdrive {
     let nowPower = [0, 0];
     let nowBrake = brakeValue.Off
 
+    //% group="基本"
     //% blockId="Pause"
     //% 一時停止 %v 秒
     export function Pause(sec:number){
