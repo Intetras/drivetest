@@ -26,14 +26,14 @@ namespace kagabitdrive {
 
     //% group="基本"
     //% blockId="Pause"
-    //% 一時停止 %sec 秒
+    //% block="一時停止 %sec 秒"
     export function Pause(sec:number){
         basic.pause(sec * 1000);
     }
 
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
-    //% block="aモーター制御 Rモーター%powerR"
+    //% block="モーター制御 Rモーター%powerR"
     //% powerR.min=-1023 powerR.max=1023
     export function RmotorA(powerR: number) {
 
