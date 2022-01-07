@@ -22,7 +22,8 @@ namespace kagabitdrive {
     }
 
     let nowPower = [0, 0];
-    let nowBrake = brakeValue.Off
+    let nowBrake = brakeValue.Off;
+    let balance = [100,100];
 
     //% group="基本"
     //% blockId="Pause"
@@ -116,6 +117,14 @@ namespace kagabitdrive {
     export function setBrake(brake: brakeValue) {
         nowBrake = brake;
         //basic.showNumber(nowBrake)
+    }
+
+    //% group="DCモーター"
+    //% blockId="MotorBalance"
+    //% block="モーターバランス L%left % R%right %"
+    export function setBalance(lb:number,rb:number){
+        balance[0] = lb;
+        balance[1] = rb;
     }
 
     //% group="サーボモーター"
