@@ -46,7 +46,7 @@ namespace kagabitdrive {
     //% block="モーター制御 Rモーター%powerR"
     //% powerR.min=-1023 powerR.max=1023
     export function RmotorA(powerR: number) {
-        powerR = powerR * balance[1];
+        powerR = powerR * balance[1]/100;
         if (powerR > 0) {
             pins.digitalWritePin(DigitalPin.P15, direction.Forward);
             pins.analogWritePin(AnalogPin.P16, Math.abs(powerR));
@@ -80,7 +80,7 @@ namespace kagabitdrive {
     //% block="モーター制御 Lモーター%powerL"
     //% powerL.min=-1023 powerL.max=1023
     export function LmotorA(powerL: number) {
-        powerL = powerL * balance[0];
+        powerL = powerL * balance[0]/100;
         if (powerL > 0) {
             pins.digitalWritePin(DigitalPin.P13, direction.Forward);
             pins.analogWritePin(AnalogPin.P14, Math.abs(powerL));
