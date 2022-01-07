@@ -24,6 +24,12 @@ namespace kagabitdrive {
     let nowPower = [0, 0];
     let nowBrake = brakeValue.Off
 
+    //% blockId="Pause"
+    //% 一時停止 %v 秒
+    export function Pause(sec:number){
+        basic.pause(sec * 1000);
+    }
+
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
     //% block="モーター制御 Rモーター%powerR"
