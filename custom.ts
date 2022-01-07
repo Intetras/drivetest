@@ -33,7 +33,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
-    //% block="モーター制御 Rモーター%powerR"
+    //% block="aモーター制御 Rモーター%powerR"
     //% powerR.min=-1023 powerR.max=1023
     export function RmotorA(powerR: number) {
 
