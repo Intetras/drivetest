@@ -121,7 +121,7 @@ namespace kagabitdrive {
 
     //% group="DCモーター"
     //% blockId="MotorBalance"
-    //% block="モーターバランス L%left % R%right %"
+    //% block="モーターバランス L%left R%right"
     export function setBalance(lb:number,rb:number){
         balance[0] = lb;
         balance[1] = rb;
