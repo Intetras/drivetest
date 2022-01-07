@@ -36,11 +36,9 @@ namespace kagabitdrive {
 
     //% group="基本"
     //% blockId="Init"
-    //% block="モーター初期設定"
+    //% block="DCモーター初期化"
     export function Init(){
         DoubleMotor(0,0);
-        RServoAngle(90);
-        LServoAngle(90);
     }
 
     //% group="DCモーター"
