@@ -24,7 +24,9 @@ namespace kagabitdrive {
     let nowPower = [0, 0];
     let nowBrake = brakeValue.Off;
     let balance = [100,100];
-
+    /*
+    停止する時間を秒で指定します。
+    */
     //% group="基本"
     //% blockId="Pause"
     //% block="一時停止 %sec 秒"
@@ -32,12 +34,21 @@ namespace kagabitdrive {
         basic.pause(sec * 1000);
     }
 
+    //% group="基本"
+    //% blockId="Init"
+    //% block="モーター初期設定"
+    export function Init(){
+        DoubleMotor(0,0);
+        RServoAngle(90);
+        LServoAngle(90);
+    }
+
     //% group="DCモーター"
     //% blockId=R_DCmotorAnalog
     //% block="モーター制御 Rモーター%powerR"
     //% powerR.min=-1023 powerR.max=1023
     export function RmotorA(powerR: number) {
-
+        powerR = powerR * balance[1];
         if (powerR > 0) {
             pins.digitalWritePin(DigitalPin.P15, direction.Forward);
             pins.analogWritePin(AnalogPin.P16, Math.abs(powerR));
@@ -71,7 +82,7 @@ namespace kagabitdrive {
     //% block="モーター制御 Lモーター%powerL"
     //% powerL.min=-1023 powerL.max=1023
     export function LmotorA(powerL: number) {
-
+        powerL = powerL * balance[0];
         if (powerL > 0) {
             pins.digitalWritePin(DigitalPin.P13, direction.Forward);
             pins.analogWritePin(AnalogPin.P14, Math.abs(powerL));
