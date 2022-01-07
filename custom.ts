@@ -26,8 +26,8 @@ namespace kagabitdrive {
 
     //% group="基本"
     //% blockId="Pause"
-    //% 一時停止 %v 秒
-    export function Pausex(sec:number){
+    //% 一時停止 %sec 秒
+    export function Pause(sec:number){
         basic.pause(sec * 1000);
     }
 
